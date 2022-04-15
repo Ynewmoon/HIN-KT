@@ -220,7 +220,6 @@ class DataProcess():
             num = eval(lines[index])[0]
             tmp_skills = eval(lines[index + 1])[:max_len]
             tmp_skills = [skill_id_dict[ele] + 1 for ele in tmp_skills]  # for assist09
-            # tmp_skills = [ele+1 for ele in tmp_skills]                      # for assist12
             tmp_pro = eval(lines[index + 2])[:max_len]
             tmp_pro = [pro_id_dict[ele] + 1 for ele in tmp_pro]
             tmp_ans = eval(lines[index + 3])[:max_len]
