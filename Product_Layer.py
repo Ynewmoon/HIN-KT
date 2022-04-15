@@ -37,6 +37,6 @@ def pnn1(inputs, embed_size, hidden_dim, keep_prob):
     l = tf.concat([xw, ip], 1)
 
     h = tf.layers.dense(l, units=hidden_dim, activation=tf.nn.relu)
-    h = tf.nn.dropout(h, keep_prob=keep_prob)     #了防止或减轻过拟合而使用的函数，它一般用在全连接层   Dropout就是在不同的训练过程中随机扔掉一部分神经元  keep_prob=0.5扔掉0.5
+    h = tf.nn.dropout(h, keep_prob=keep_prob)  
     p = tf.reshape(tf.layers.dense(h, units=1), [-1])
     return h, p
